@@ -1,4 +1,4 @@
-﻿SELECT city FROM agents WHERE city IN (SELECT city FROM customers WHERE name='Tiptop');
+﻿SELECT city FROM agents WHERE aid IN (SELECT aid FROM orders WHERE cid IN (SELECT cid FROM customers WHERE name='Tiptop'));
 SELECT DISTINCT pid FROM orders WHERE aid IN (SELECT aid FROM orders WHERE cid IN (SELECT cid FROM customers WHERE city='Kyoto'));
 SELECT cid, name FROM customers WHERE cid in (SELECT cid FROM orders WHERE aid != 'a04');
 SELECT cid, name FROM customers WHERE cid in (SELECT cid FROM orders WHERE pid = 'p01' INTERSECT (SELECT cid from orders WHERE pid = 'p07'));
