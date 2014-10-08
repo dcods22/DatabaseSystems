@@ -1,0 +1,1 @@
+SELECT c.name, c.city FROM customers c, products p WHERE c.city = max(count(p.name));
