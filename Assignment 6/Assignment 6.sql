@@ -6,7 +6,7 @@ WHERE c.city IN (SELECT city FROM
 	GROUP BY p2.city) 
 		AS city_count 
 		ORDER BY city_count DESC
-		LIMIT 1);
+		LIMIT 1) LIMIT 1;
 	
 		
 SELECT c.name, c.city
